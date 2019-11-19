@@ -10,7 +10,7 @@ const routes: Routes = [
     },
     {
         path: 'login',
-        loadChildren: './login/login.module#LoginPageModule'
+        loadChildren: './auth/login/login.module#LoginPageModule'
     },
     {
         path: 'home',
@@ -20,8 +20,9 @@ const routes: Routes = [
     },
     {
         path: 'signup',
-        loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule)
+        loadChildren: () => import('./auth/signup/signup.module').then(m => m.SignupPageModule)
     },
+  { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
   { path: 'message-room', loadChildren: './message-room/message-room.module#MessageRoomPageModule' },
 ];
 

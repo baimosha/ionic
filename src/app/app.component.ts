@@ -30,7 +30,7 @@ export class AppComponent {
             this.splashScreen.hide();
             this.authService.authState.subscribe(state => {
                 if (state) {
-                    this.router.navigate(['home/users']);
+                    this.router.navigate(['home']);
                 }
             });
         });
